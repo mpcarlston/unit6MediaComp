@@ -50,7 +50,67 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  
+  public static void testSepia()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.sepia();
+      beach.explore();
+    }
+  public static void testSunset()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.sunset();
+      beach.explore();
+  }
+  public static void testKeepOnlyBlue()
+  {
+      Picture canvas = new Picture("beach.jpg");
+      canvas.keepOnlyBlue();
+      canvas.explore();
+  }
+  public static void testNegate()
+  {
+      Picture canvas = new Picture("beach.jpg");
+      canvas.negate();
+      canvas.explore();
+    }
+  public static void testGrayscale()
+  {
+      Picture canvas = new Picture("beach.jpg");
+      canvas.grayscale();
+      canvas.explore();
+  }
+  public static void testFixUnderwater()
+  {
+      Picture canvas = new Picture("water.jpg");
+      canvas.fixUnderwater();
+      canvas.explore();
+    }
+  public static void testMirrorRightToLeft()
+  {
+      Picture canvas = new Picture("beach.jpg");
+      canvas.mirrorVerticalRightToLeft();
+      canvas.explore();
+    }
+  public static void testMirrorHorizontal()
+  {
+      Picture canvas = new Picture("swan.jpg");
+      canvas.mirrorHorizontal();
+      canvas.explore(); 
+  }
+  public static void testCopy()
+  {
+      Picture canvas = new Picture("beach.jpg");
+      Picture swan = new Picture("swan");
+      swan.copy(swan,0,0,10,10);
+      swan.explore();
+  }
+  public static void testMirrorDiagonal()
+  {
+      Picture canvas = new Picture("beach.jpg");
+      canvas.mirrorDiagonal();
+      canvas.explore();
+    }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,7 +118,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();

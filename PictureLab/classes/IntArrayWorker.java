@@ -98,5 +98,31 @@ public class IntArrayWorker
       }
     }
   }
+  
  
+  public int getLarger()
+  {
+      int num = 0;
+      for (int row=0;row<matrix.length;row++)
+      {
+          for (int col=0;col<matrix.length;col++)
+          {
+              if (matrix[row][col] > num)
+              {
+                  num = matrix[row][col];
+              }
+          }
+      }
+      return num;
+  }
+  public int getColTotal(int col1)
+  {
+      int num = 0;
+      for (int row=0;row<matrix.length;row++)
+      {
+          num += matrix[row][col1];
+          
+      }
+      return num;
+  }
 }
